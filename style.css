@@ -30,6 +30,7 @@
     var(--Bright-Cyan),
     var(--Lime-Green)
   );
+  --section-title: 2rem;
 }
 
 body {
@@ -269,4 +270,44 @@ body {
     width: 500px;
     padding-right: 0rem;
   }
+}
+
+/**** Why Choose Us ****/
+#whychooseus {
+  min-height: 100vh;
+  background-color: var(--Light-Grayish-Blue);
+}
+.whychooseus__maintext {
+  text-align: center;
+  padding-top: 5rem;
+  margin-top: 5rem;
+}
+.whychooseus__maintext__h1 {
+  font-weight: 400;
+  padding: 0 4rem;
+  font-size: var(--section-title);
+  color: var(--Dark-Blue);
+}
+.whychooseus__maintext__p {
+  color: var(--Grayish-Blue);
+  margin-top: 1rem;
+}
+.whychooseus__cards {
+  padding: 2rem 0 5rem 0;
+  padding: 0 0.5rem;
+}
+.whychooseus__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+.whychooseus__card__title {
+  font-weight: 400;
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
+}
+.whychooseus__card__details {
+  color: var(--Grayish-Blue);
 }
