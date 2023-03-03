@@ -31,6 +31,9 @@
     var(--Lime-Green)
   );
   --section-title: 2rem;
+  --section-title-size-xxl: 3rem;
+  --section-p-text-size-xxl: 1.2rem;
+  --universal-padding: 10rem;
 }
 
 body {
@@ -155,7 +158,7 @@ body {
 /* media queries */
 @media screen and (min-width: 1280px) {
   #nav {
-    padding: 0 10rem;
+    padding: 0 var(--universal-padding);
   }
 }
 
@@ -250,7 +253,7 @@ body {
     top: -6rem;
   }
   .hero__text__container {
-    padding-left: 10rem;
+    padding-left: var(--universal-padding);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -269,6 +272,7 @@ body {
   .hero__text__p {
     width: 500px;
     padding-right: 0rem;
+    font-size: var(--section-p-text-size-xxl);
   }
 }
 
@@ -277,6 +281,7 @@ body {
   min-height: 100vh;
   background-color: var(--Light-Grayish-Blue);
 }
+/** main text **/
 .whychooseus__maintext {
   text-align: center;
   padding-top: 5rem;
@@ -292,6 +297,7 @@ body {
   color: var(--Grayish-Blue);
   margin-top: 1rem;
 }
+/** cards **/
 .whychooseus__cards {
   padding: 2rem 0 5rem 0;
   padding: 0 0.5rem;
@@ -310,4 +316,39 @@ body {
 }
 .whychooseus__card__details {
   color: var(--Grayish-Blue);
+}
+
+/* media queries */
+@media screen and (min-width: 1440px) {
+  #whychooseus {
+    padding-left: var(--universal-padding);
+  }
+  .whychooseus__maintext {
+    text-align: left;
+  }
+  .whychooseus__maintext__h1 {
+    padding: 0;
+  }
+  .whychooseus__maintext__p {
+    width: 600px;
+  }
+  .whychooseus__cards {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .whychooseus__card {
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .whychooseus__maintext__h1 {
+    font-size: var(--section-title-size-xxl);
+  }
+  .whychooseus__maintext__p,
+  .whychooseus__card__details {
+    font-size: var(--section-p-text-size-xxl);
+  }
 }
