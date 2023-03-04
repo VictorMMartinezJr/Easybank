@@ -31,7 +31,7 @@
     var(--Lime-Green)
   );
   --section-title: 2rem;
-  --section-title-size-xxl: 3rem;
+  --section-title-size-xxl: 2.5rem;
   --section-p-text-size-xxl: 1.2rem;
   --universal-padding: 10rem;
 }
@@ -41,7 +41,12 @@ body {
   overflow-x: hidden;
 }
 
+.section {
+  min-height: 100vh;
+}
+
 /**** Buttons ****/
+
 /* primary */
 .primary__btn {
   display: inline-block;
@@ -195,6 +200,9 @@ body {
   margin: 1.5rem 0;
   padding: 0 0.5rem;
 }
+.hero__text__btn {
+  margin-bottom: 5rem;
+}
 /* media queries */
 @media screen and (min-width: 500px) {
   .hero__image-mockup {
@@ -228,10 +236,8 @@ body {
     text-align: left;
     margin-top: 0;
     flex: 1;
-    top: -7rem;
     position: relative;
     padding-left: 4rem;
-    width: auto;
   }
   .hero__text__h1,
   .hero__text__p {
@@ -246,9 +252,6 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
-  .hero__images__container {
-    background-position-y: -200px;
-  }
   .hero__image-mockup {
     top: -6rem;
   }
@@ -257,17 +260,29 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero__images__container {
+    background-size: 200%;
+    background-position-y: -280px;
+    background-position-x: -50px;
+  }
   .hero__text__p {
     width: 400px;
     padding-right: 0;
   }
 }
 @media screen and (min-width: 1536px) {
+  .hero__images__container {
+    background-position-y: -300px;
+    background-position-x: -50px;
+  }
   .hero__image-mockup {
-    top: -10rem;
+    width: 650px;
   }
   .hero__text__h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .hero__text__p {
     width: 500px;
@@ -278,14 +293,12 @@ body {
 
 /**** Why Choose Us ****/
 #whychooseus {
-  min-height: 100vh;
   background-color: var(--Light-Grayish-Blue);
 }
 /** main text **/
 .whychooseus__maintext {
   text-align: center;
   padding-top: 5rem;
-  margin-top: 5rem;
 }
 .whychooseus__maintext__h1 {
   font-weight: 400;
@@ -322,6 +335,8 @@ body {
 @media screen and (min-width: 1440px) {
   #whychooseus {
     padding-left: var(--universal-padding);
+    min-height: 60vh;
+    padding-bottom: 5rem;
   }
   .whychooseus__maintext {
     text-align: left;
@@ -352,3 +367,5 @@ body {
     font-size: var(--section-p-text-size-xxl);
   }
 }
+
+/**** Latest Articles ****/
