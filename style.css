@@ -11,7 +11,7 @@
 :root {
   /* Primary */
   --Dark-Blue: hsl(233, 26%, 24%);
-  --Lime-Green: hsl(136, 65%, 51%);
+  --Lime-Green: hsl(136, 64%, 50%);
   --Bright-Cyan: hsl(192, 70%, 51%);
 
   /* Neutral */
@@ -425,7 +425,10 @@ body {
 .latestarticles__article__text__title {
   font-weight: 400;
 }
-
+.latestarticles__article__text__title:hover {
+  cursor: pointer;
+  color: var(--Lime-Green);
+}
 /* media queries */
 @media screen and (min-width: 768px) {
   .latestarticles__articles {
@@ -486,6 +489,7 @@ body {
 .footer__social {
   margin: 0 0.5rem;
   height: 1.5rem;
+  filter: contrast(50%);
 }
 /** footer nav links **/
 .footer__links {
@@ -494,12 +498,14 @@ body {
 }
 .footer__links > li {
   list-style: none;
-  margin: 1.2rem 0;
+  margin: 2rem 0;
 }
 .footer__link {
   text-decoration: none;
   color: var(--White);
-  padding: 0.5rem 0;
+}
+.footer__link:hover {
+  color: var(--Lime-Green);
 }
 .footer__btn__container {
   display: flex;
@@ -509,4 +515,56 @@ body {
 .footer__copyright {
   margin: 2rem 0;
   color: var(--Grayish-Blue);
+}
+
+/* media queries */
+@media screen and (min-width: 1024px) {
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 0 1rem;
+  }
+  .footer__external__links__container {
+    display: flex;
+  }
+  .footer__external__links {
+    align-items: flex-start;
+  }
+  .footer__socials {
+    margin-bottom: 2rem;
+  }
+  .footer__links {
+    display: flex;
+    text-align: left;
+    margin: 0.5rem 0 0 4rem;
+  }
+  .footer__links > li {
+    margin: 0;
+  }
+  .footer__links__1-3,
+  .footer__links__4-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .footer__btn__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+  .footer__copyright {
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #footer {
+    padding: 0 var(--universal-padding);
+  }
+  .footer__links {
+    margin-left: 7rem;
+  }
 }
