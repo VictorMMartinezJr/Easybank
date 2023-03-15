@@ -30,6 +30,7 @@
     var(--Bright-Cyan),
     var(--Lime-Green)
   );
+  /* Title Font Sizes */
   --section-title: 2rem;
   --section-title-size-xxl: 2.5rem;
   --section-p-text-size-xxl: 1.2rem;
@@ -369,3 +370,38 @@ body {
 }
 
 /**** Latest Articles ****/
+.latestarticles__title {
+  font-size: var(--section-title);
+  font-weight: 400;
+  color: var(--Dark-Blue);
+  text-align: center;
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+}
+.latestarticles__articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.latestarticles__article {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.latestarticle__img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.latestarticles__article__text__container {
+  padding: 1rem;
+}
+.latestarticles__article__text__author,
+.latestarticles__article__text__details {
+  color: var(--Grayish-Blue);
+  margin: 1rem 0;
+}
+.latestarticles__article__text__author {
+  font-size: 0.8rem;
+}
+.latestarticles__article__text__title {
+  font-weight: 400;
+}
