@@ -5,8 +5,18 @@ const app = () => {
   const iconCloseMenu = document.querySelector(".nav__menuicon--close");
   const navLinks = document.querySelector(".nav__links");
 
-  // Nav //
+  // disable scroll on body
+  const disableScroll = () => {
+    document.body.classList.add("stopscroll");
+    return;
+  };
+  // enable scroll on body
+  const enableScroll = () => {
+    document.body.classList.remove("stopscroll");
+    return;
+  };
 
+  // Nav //
   // nav burger icon
   const showBurgerMenu = () => {
     if (iconBurgerMenu.classList.contains("nav__menuicon--hidden")) {
@@ -34,11 +44,13 @@ const app = () => {
   // nav links
   const showNavLinks = () => {
     navLinks.classList.add("nav__links--active");
+    disableScroll();
     return;
   };
   const hideNavLinks = () => {
     if (navLinks.classList.contains("nav__links--active")) {
       navLinks.classList.remove("nav__links--active");
+      enableScroll();
     }
     return;
   };
