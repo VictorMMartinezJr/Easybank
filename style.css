@@ -489,7 +489,6 @@ body {
 .footer__social {
   margin: 0 0.5rem;
   height: 1.5rem;
-  filter: contrast(50%);
 }
 /** footer nav links **/
 .footer__links {
