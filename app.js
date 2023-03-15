@@ -4,7 +4,9 @@ const app = () => {
   const iconBurgerMenu = document.querySelector(".nav__menuicon--burger");
   const iconCloseMenu = document.querySelector(".nav__menuicon--close");
   const navLinks = document.querySelector(".nav__links");
+  const heroBGColor = document.querySelector(".hero__backgroundcolor");
 
+  // Body //
   // disable scroll on body
   const disableScroll = () => {
     document.body.classList.add("stopscroll");
@@ -16,6 +18,17 @@ const app = () => {
     return;
   };
 
+  // Hero //
+  // add hero bg color
+  const addHeroBgColor = () => {
+    heroBGColor.classList.add("hero__backgroundcolor-active");
+    return;
+  };
+  // remove hero bg color
+  const removeHeroBgColor = () => {
+    heroBGColor.classList.remove("hero__backgroundcolor-active");
+    return;
+  };
   // Nav //
   // nav burger icon
   const showBurgerMenu = () => {
@@ -44,12 +57,14 @@ const app = () => {
   // nav links
   const showNavLinks = () => {
     navLinks.classList.add("nav__links--active");
+    addHeroBgColor();
     disableScroll();
     return;
   };
   const hideNavLinks = () => {
     if (navLinks.classList.contains("nav__links--active")) {
       navLinks.classList.remove("nav__links--active");
+      removeHeroBgColor();
       enableScroll();
     }
     return;
