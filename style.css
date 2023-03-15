@@ -295,6 +295,7 @@ body {
 /**** Why Choose Us ****/
 #whychooseus {
   background-color: var(--Light-Grayish-Blue);
+  padding-bottom: 5rem;
 }
 /** main text **/
 .whychooseus__maintext {
@@ -335,9 +336,8 @@ body {
 /* media queries */
 @media screen and (min-width: 1440px) {
   #whychooseus {
-    padding-left: var(--universal-padding);
+    padding: 0 var(--universal-padding);
     min-height: 60vh;
-    padding-bottom: 5rem;
   }
   .whychooseus__maintext {
     text-align: left;
@@ -370,6 +370,9 @@ body {
 }
 
 /**** Latest Articles ****/
+#latestarticles {
+  padding-bottom: 5rem;
+}
 .latestarticles__title {
   font-size: var(--section-title);
   font-weight: 400;
@@ -386,11 +389,28 @@ body {
 .latestarticles__article {
   width: 90%;
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 5px;
 }
-.latestarticle__img {
-  width: 100%;
+.latestarticles__article__img__container {
+  background-size: cover;
+  background-position: center;
   border-radius: 5px 5px 0 0;
 }
+.latestarticles__article__img__container--currency {
+  background-image: url(assets/image-currency.jpg);
+}
+.latestarticles__article__img__container--restaurant {
+  background-image: url(assets/image-restaurant.jpg);
+}
+.latestarticles__article__img__container--plane {
+  background-image: url(assets/image-plane.jpg);
+}
+.latestarticles__article__img__container--confetti {
+  background-image: url(assets/image-confetti.jpg);
+}
+
 .latestarticles__article__text__container {
   padding: 1rem;
 }
@@ -404,4 +424,33 @@ body {
 }
 .latestarticles__article__text__title {
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .latestarticles__articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .latestarticles__articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  #latestarticles {
+    padding: 0 var(--universal-padding);
+    min-height: 60vh;
+  }
+  .latestarticles__title {
+    text-align: left;
+  }
+  .latestarticles__articles {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 3rem;
+  }
+  .latestarticles__article {
+    width: 100%;
+    margin: 0rem;
+  }
 }
